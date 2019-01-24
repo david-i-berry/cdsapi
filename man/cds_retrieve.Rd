@@ -36,4 +36,5 @@ request <- "{
 result <- cds_retrieve( dataset, request)
 # If timeout the following can be used to try again without generating new request
 result <- cds_retrieve( dataset, request, request_id = result$request_id)
+
 }
