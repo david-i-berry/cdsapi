@@ -1,6 +1,6 @@
 Package: cdsapi
 Title: cdsapi
-Version: 0.0.0.9000
+Version: 0.0.0.91
 Authors@R: person("David", "Berry", email = "dyb@noc.ac.uk", role = c("aut", "cre"))
 Description: Download data from the Copernicus Climate Change Service Climate Data Store.
 Depends: R (>= 3.4.4)
