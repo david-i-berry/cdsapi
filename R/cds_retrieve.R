@@ -1,5 +1,5 @@
 # Load required libraries
-library(httr)
+require(httr)
 #' cds_retrieve
 #'
 #' Function to retrieve data from the Copernicus Climate Change Service (C3S) Climate Data Store
@@ -59,7 +59,7 @@ cds_retrieve <- function(dataset, request, target = '' , request_id = NA){
       while( waiting ){
          # Check status
          source <- paste0( cdsURL, '/tasks/', request_id )
-         response <- GET( source , authenticate(CDSuid, CDSpwd) )
+         response <- GET( source , authenticate(cdsUID, cdsPWD) )
          print( content( response ) )
          if( content( response )$state == 'completed' ){
             waiting <- FALSE
