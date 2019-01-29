@@ -50,7 +50,7 @@ cds_retrieve <- function(dataset, request, target = '' , request_id = NA){
       request_id <- content(response)$request_id
    }else{
       source <- paste0( cdsURL, '/tasks/', request_id )
-      response <- GET( source , authenticate(CDSuid, CDSpwd) )
+      response <- GET( source , authenticate(cdsUID, cdsPWD) )
    }
    # check if ready, loop until timeout if not
    if( content(response)$state != 'completed' ){
